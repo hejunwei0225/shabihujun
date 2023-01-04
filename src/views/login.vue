@@ -1,7 +1,6 @@
 <template>
   <div class="login-wrap">
-    <video class="vbg" src="/static/bg.mp4" preload="auto" loop playsinline autoplay tabindex="-1"
-      muted="muted"></video>
+    <video class="vbg" :src="videoSrc" preload="auto" loop playsinline autoplay tabindex="-1" muted="muted"></video>
 
     <div class="img-bg"></div>
     <el-form label-position="left" :model="ruleForm" :rules="rules" ref="ruleForm" label-width="0px"
@@ -42,6 +41,7 @@ export default {
         randomStr: '',
         codeimg: ''
       },
+      videoSrc: videoSrc,
       //rules前端验证
       rules: {
         username: [{ required: true, message: '请输入账号', trigger: 'blur' }],
