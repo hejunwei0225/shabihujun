@@ -1,6 +1,7 @@
 <template>
   <div class="login-wrap">
-    <video class="vbg" :src="videoSrc" preload="auto" loop playsinline autoplay tabindex="-1" muted="muted"></video>
+    <div class="vbg"><video :src="videoSrc" preload="auto" loop playsinline autoplay tabindex="-1"
+        muted="muted"></video></div>
 
     <div class="img-bg"></div>
     <el-form label-position="left" :model="ruleForm" :rules="rules" ref="ruleForm" label-width="0px"
@@ -141,6 +142,8 @@ export default {
   top: 0;
   left: 0;
   z-index: -1;
+  width: 100%;
+  height: 100%;
 }
 
 .img-bg {
