@@ -1,6 +1,6 @@
 <template>
   <div class="login-wrap">
-    <video class="vbg" src="../../static/bg.mp4" preload="auto" loop playsinline autoplay tabindex="-1"
+    <video class="vbg" src="/static/bg.mp4" preload="auto" loop playsinline autoplay tabindex="-1"
       muted="muted"></video>
 
     <div class="img-bg"></div>
@@ -25,6 +25,7 @@
 import { login } from '../api/userMG'
 import { setCookie, getCookie, delCookie } from '../utils/util'
 import md5 from 'js-md5'
+import videoSrc from "../../static/bg.mp4"
 export default {
   name: 'login',
   data() {
